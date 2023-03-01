@@ -7,7 +7,7 @@ namespace Day16And17_DataStructuresAndAlgorithm
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the DataStructure and algorithms Practices");
-            Console.WriteLine("1.Permutation Of String");
+            Console.WriteLine("1.Permutation Of String\n4.Bubble Sort");
             Console.WriteLine("Choose option from above");
             int option = Convert.ToInt32(Console.ReadLine());
             switch(option)
@@ -16,6 +16,9 @@ namespace Day16And17_DataStructuresAndAlgorithm
                     string str = "ABC";
                     int len =str.Length;
                     PermutationOfString.Permute(str ,0,len-1);
+                    break;
+                case 4:
+                    BubbleSort.Bubble_Sort_Operation();
                     break;
             }
         }
