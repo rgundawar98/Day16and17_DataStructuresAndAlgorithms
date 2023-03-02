@@ -18,12 +18,7 @@ namespace Day16And17_DataStructuresAndAlgorithm
                     PermutationOfString.Permute(str ,0,len-1);
                     break;
                 case 3:
-                    string[] name = { "Abhi", "Ram", "Anjali", "Megha", "Shreya" };
-                    InsertionSort.Insertion_Sort_Operation(name);
-                    foreach(var item in name)
-                    {
-                        Console.WriteLine(item);
-                    }
+                    InsertionSort.Insertion_Sort_Operation();
                     break;
                 case 4:
                     BubbleSort.Bubble_Sort_Operation();
