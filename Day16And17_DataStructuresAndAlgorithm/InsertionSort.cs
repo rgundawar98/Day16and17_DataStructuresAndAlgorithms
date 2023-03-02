@@ -8,19 +8,20 @@ namespace Day16And17_DataStructuresAndAlgorithm
 {
     public class InsertionSort
     {
-        public  static void Insertion_Sort_Operation() 
+        public  static void Insertion_Sort_Operation(IComparable[] arr) 
         {
-            string[] arr = { "Raj", "Sham", "Anil", "Villin", "Balaji" };
-            int num = 5, val1, val2, flag;
-            Console.WriteLine("Initial array");
-            for(val1=0; val1<num; val1++)
+            int val1, val2;
+            for (val1 = 1; val1 <= arr.Length; val1++)
             {
-                Console.WriteLine(arr[val1]);
-            }
-            for(val1=1;val1<num;val1++)
-            {
-               
-            }
+                IComparable value = arr[val1];
+                val2 = val1 - 1;
+                while ((val2 > 0) && (arr[val1].CompareTo(value) > 0))
+                {
+                    arr[val2 + 1] = arr[val1];
+                    val2--;
+                }
+                arr[val2 + 1] = value;
+            }   
         }
     }
 }
